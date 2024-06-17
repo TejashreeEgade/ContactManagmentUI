@@ -1,0 +1,26 @@
+<div class="content-container mt-5">
+    <form [formGroup]="editContactForm">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name<span class="error">*</span></label>
+            <input type="text" formControlName="firstName" class="form-control" id="firstName" placeholder="First Name">
+            <div class="error" *ngIf="(editFormSubmit != null && editContactFormControls.firstName.invalid) || (editContactFormControls.firstName.touched || editContactFormControls.firstName.dirty)">
+            <span *ngIf="editContactFormControls.firstName.errors?.['required']">It is required</span></div>
+          </div>
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name<span class="error">*</span></label>
+            <input type="text" formControlName="lastName" class="form-control" id="lastname" placeholder="Last Name">
+            <div class="error" *ngIf="(editFormSubmit != null && editContactFormControls.lastName.invalid) || (editContactFormControls.lastName.touched || editContactFormControls.lastName.dirty)">
+                <span *ngIf="editContactFormControls.lastName.errors?.['required']">It is required</span></div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address<span class="error">*</span></label>
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="name@example.com">
+            <div class="error" *ngIf="(editFormSubmit != null && editContactFormControls.email.invalid) || (editContactFormControls.email.touched || editContactFormControls.email.dirty)">
+                <span *ngIf="editContactFormControls.email.errors?.['required']">It is required</span></div>
+          </div>
+		  <div>
+            <button type="button" class="btn btn-success" (click)="update()">Update</button> &nbsp;&nbsp;
+            <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
+          </div>
+    </form>
+</div>

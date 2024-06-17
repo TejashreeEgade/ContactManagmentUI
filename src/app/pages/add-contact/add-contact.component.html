@@ -1,0 +1,27 @@
+<div class="content-container mt-5">
+    <form [formGroup]="addContactForm">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">First Name<span class="error">*</span></label>
+            <input type="text" formControlName="firstName" class="form-control" id="firstName" placeholder="First Name">
+            <div class="error" *ngIf="(contactFormSubmit != null && addContactFormControls.firstName.invalid) || (addContactFormControls.firstName.touched || addContactFormControls.firstName.dirty)">
+            <span *ngIf="addContactFormControls.firstName.errors?.['required']">It is required</span></div>
+          </div>
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Last Name<span class="error">*</span></label>
+            <input type="text" formControlName="lastName" class="form-control" id="lastname" placeholder="Last Name">
+            <div class="error" *ngIf="(contactFormSubmit != null && addContactFormControls.lastName.invalid) || (addContactFormControls.lastName.touched || addContactFormControls.lastName.dirty)">
+                <span *ngIf="addContactFormControls.lastName.errors?.['required']">It is required</span></div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address<span class="error">*</span></label>
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="name@example.com">
+            <div class="error" *ngIf="(contactFormSubmit != null && addContactFormControls.email.invalid) || (addContactFormControls.email.touched || addContactFormControls.email.dirty)">
+                <span *ngIf="addContactFormControls.email.errors?.['required']">It is required</span>
+                <span *ngIf="!addContactFormControls.email.errors?.['required'] && addContactFormControls.email.invalid">Please enter correct email id</span>
+          </div></div>
+          <div>
+            <button type="button" class="btn btn-success" (click)="submit()">Submit</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
+          </div>
+    </form>
+</div>

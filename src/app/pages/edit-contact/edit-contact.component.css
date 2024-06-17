@@ -1,0 +1,10 @@
+.content-container{
+    width: 320px;
+    margin: auto;
+    padding-top: 12px;
+    /* border: 2px solid; */
+}
+
+.error{
+    color: red;
+}
