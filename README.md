@@ -21,8 +21,8 @@ This is the frontend application built using Angular 14 and Bootstrap.
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/TejashreeEgade/ContactManagementSystemUI.git
-    cd your-repo-name/MyAngularApp
+    git clone https://github.com/TejashreeEgade/ContactManagementUI.git
+    cd ContactManagementUI/ContactManagementUI
     ```
 
 2. Install the npm packages:
@@ -48,9 +48,9 @@ This is the frontend application built using Angular 14 and Bootstrap.
 
 ### How to Run the Application
 
-1. Navigate to the project directory:https://github.com/TejashreeEgade/ContactManagementSystemUI.git
+1. Navigate to the project directory:https://github.com/TejashreeEgade/ContactManagementUI.git
     ```sh
-    cd ContactManagementSystemUI/ContactManagementSystemUI
+    cd ContactManagementUI/ContactManagementUI
     ```
 
 2. Run the Angular development server:
